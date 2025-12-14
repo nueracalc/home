@@ -7,95 +7,95 @@
 <style>
   /* Reset and base */
   * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Inter', sans-serif; }
-  body { background: linear-gradient(135deg, #0f172a, #111827, #0f172a); color: #f0f9ff; }
+  body { background: linear-gradient(135deg, #0f172a, #111827, #0f172a); color: #f0f9ff; line-height: 1.8; }
 
   /* Container */
-  .container { max-width: 1280px; margin: auto; padding: 2rem; }
+  .container { max-width: 1280px; margin: auto; padding: 4rem 2rem; }
 
   /* Sticky header */
-  header { position: sticky; top: 0; backdrop-filter: blur(10px); background: rgba(15, 23, 42, 0.7); border-bottom: 1px solid #1e293b; z-index: 50; display: flex; justify-content: space-between; align-items: center; padding: 1rem 2rem; }
-  header h1 { font-weight: 700; font-size: 1.5rem; }
+  header { position: sticky; top: 0; backdrop-filter: blur(10px); background: rgba(15, 23, 42, 0.7); border-bottom: 1px solid #1e293b; z-index: 50; display: flex; justify-content: space-between; align-items: center; padding: 2rem 3rem; }
+  header h1 { font-weight: 700; font-size: 1.8rem; }
   header h1 span { color: #818cf8; }
-  header button { background-color: #6366f1; border: none; padding: 0.5rem 1rem; border-radius: 1rem; color: white; cursor: pointer; transition: background 0.3s; }
+  header button { background-color: #6366f1; border: none; padding: 0.75rem 1.5rem; border-radius: 1rem; color: white; cursor: pointer; transition: background 0.3s; }
   header button:hover { background-color: #4f46e5; }
 
   /* Hero */
-  .hero { display: flex; flex-wrap: wrap; gap: 2rem; align-items: center; margin-top: 4rem; }
-  .hero-text { flex: 1 1 500px; }
-  .hero-text h2 { font-size: 3rem; font-weight: 800; background: linear-gradient(90deg, #6366f1, #a78bfa, #6366f1); -webkit-background-clip: text; -webkit-text-fill-color: transparent; margin-bottom: 1rem; }
-  .hero-text p { color: #e0e7ff; margin-bottom: 1rem; line-height: 1.6; }
-  .stars { color: #facc15; margin-bottom: 1rem; }
-  .hero-buttons button { margin-right: 1rem; padding: 1rem 2rem; font-size: 1rem; border-radius: 1rem; cursor: pointer; border: none; transition: all 0.3s; }
+  .hero { display: flex; flex-wrap: wrap; gap: 3rem; align-items: center; margin-top: 6rem; }
+  .hero-text { flex: 1 1 500px; padding: 1rem; }
+  .hero-text h2 { font-size: 3.5rem; font-weight: 800; background: linear-gradient(90deg, #6366f1, #a78bfa, #6366f1); -webkit-background-clip: text; -webkit-text-fill-color: transparent; margin-bottom: 1.5rem; }
+  .hero-text p { color: #e0e7ff; margin-bottom: 1.5rem; }
+  .stars { color: #facc15; margin-bottom: 1.5rem; font-size: 1.1rem; }
+  .hero-buttons button { margin-right: 1.5rem; padding: 1.25rem 2.5rem; font-size: 1.1rem; border-radius: 1.25rem; cursor: pointer; border: none; transition: all 0.3s; }
   .buy-btn { background-color: #6366f1; color: white; }
   .buy-btn:hover { background-color: #4f46e5; }
   .learn-btn { background-color: transparent; border: 2px solid #818cf8; color: white; }
   .learn-btn:hover { background-color: #6366f1; border-color: #a78bfa; }
 
-  .hero-image { flex: 1 1 400px; position: relative; }
+  .hero-image { flex: 1 1 400px; position: relative; padding: 1rem; }
   .hero-image img { width: 100%; border-radius: 2rem; position: relative; z-index: 10; }
   .hero-image::before { content: ''; position: absolute; inset: -1rem; background: rgba(99, 102, 241, 0.2); filter: blur(80px); border-radius: 50%; z-index: 0; }
 
   /* Sections */
-  section { margin-top: 6rem; }
-  .cards { display: flex; flex-wrap: wrap; gap: 2rem; }
-  .card { background: #1e293b; border: 1px solid #334155; border-radius: 1.5rem; padding: 2rem; flex: 1 1 300px; transition: transform 0.3s; }
+  section { margin-top: 8rem; padding: 2rem 0; }
+  .cards { display: flex; flex-wrap: wrap; gap: 3rem; }
+  .card { background: #1e293b; border: 1px solid #334155; border-radius: 2rem; padding: 3rem; flex: 1 1 300px; transition: transform 0.3s; }
   .card:hover { transform: translateY(-10px); }
-  .card h3 { font-size: 1.5rem; margin-bottom: 1rem; }
+  .card h3 { font-size: 1.75rem; margin-bottom: 1.5rem; }
   .card ul { list-style: none; }
-  .card li { margin-bottom: 0.5rem; }
-  .card li::before { content: '✔'; color: #22c55e; margin-right: 0.5rem; }
+  .card li { margin-bottom: 1rem; font-size: 1.1rem; }
+  .card li::before { content: '✔'; color: #22c55e; margin-right: 0.75rem; }
 
   /* Features grid */
-  .features { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 2rem; }
-  .feature-card { background: #1e293b; border: 1px solid #334155; border-radius: 1.5rem; padding: 2rem; text-align: center; transition: transform 0.3s; }
+  .features { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 3rem; }
+  .feature-card { background: #1e293b; border: 1px solid #334155; border-radius: 2rem; padding: 3rem; text-align: center; transition: transform 0.3s; }
   .feature-card:hover { transform: translateY(-6px); }
-  .feature-icon { font-size: 2rem; color: #6366f1; margin-bottom: 1rem; }
+  .feature-icon { font-size: 2.5rem; color: #6366f1; margin-bottom: 1.5rem; }
 
   /* Pricing */
-  .pricing { background: #1e293b; border: 1px solid rgba(99,102,241,0.4); border-radius: 2rem; padding: 3rem; text-align: center; }
-  .pricing h2 { font-size: 2.5rem; font-weight: 800; margin-bottom: 1rem; }
-  .pricing p { color: #e0e7ff; margin-bottom: 1rem; }
-  .pricing .price { font-size: 4rem; font-weight: 900; margin-bottom: 1rem; }
-  .pricing ul { list-style: none; margin-bottom: 2rem; }
-  .pricing li { margin-bottom: 0.5rem; }
-  .pricing li::before { content: '✔'; color: #22c55e; margin-right: 0.5rem; }
-  .pricing button { padding: 1rem 2rem; font-size: 1rem; border-radius: 1rem; border: none; background: #6366f1; color: white; cursor: pointer; transition: background 0.3s; }
+  .pricing { background: #1e293b; border: 1px solid rgba(99,102,241,0.4); border-radius: 2.5rem; padding: 4rem; text-align: center; }
+  .pricing h2 { font-size: 3rem; font-weight: 800; margin-bottom: 1.5rem; }
+  .pricing p { color: #e0e7ff; margin-bottom: 1.5rem; }
+  .pricing .price { font-size: 4.5rem; font-weight: 900; margin-bottom: 2rem; }
+  .pricing ul { list-style: none; margin-bottom: 2.5rem; }
+  .pricing li { margin-bottom: 1rem; font-size: 1.1rem; }
+  .pricing li::before { content: '✔'; color: #22c55e; margin-right: 0.75rem; }
+  .pricing button { padding: 1.5rem 3rem; font-size: 1.15rem; border-radius: 1.25rem; border: none; background: #6366f1; color: white; cursor: pointer; transition: background 0.3s; }
   .pricing button:hover { background: #4f46e5; }
 
   /* FAQ */
-  .faq { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; }
-  .faq-item { background: #1e293b; border: 1px solid #334155; border-radius: 1.5rem; padding: 1.5rem; }
+  .faq { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 3rem; }
+  .faq-item { background: #1e293b; border: 1px solid #334155; border-radius: 2rem; padding: 2.5rem; font-size: 1.05rem; }
 
   /* Final CTA */
-  .final-cta { text-align: center; margin-top: 4rem; }
-  .final-cta button { margin-top: 1rem; padding: 1rem 2rem; font-size: 1.2rem; border-radius: 1rem; border: none; background: #6366f1; color: white; cursor: pointer; transition: background 0.3s; }
+  .final-cta { text-align: center; margin-top: 6rem; }
+  .final-cta button { margin-top: 1.5rem; padding: 1.5rem 3rem; font-size: 1.25rem; border-radius: 1.25rem; border: none; background: #6366f1; color: white; cursor: pointer; transition: background 0.3s; }
   .final-cta button:hover { background: #4f46e5; }
 
   /* Footer */
-  footer { text-align: center; margin-top: 4rem; padding: 2rem 0; color: #c7d2fe; border-top: 1px solid #334155; font-size: 0.9rem; }
+  footer { text-align: center; margin-top: 6rem; padding: 3rem 0; color: #c7d2fe; border-top: 1px solid #334155; font-size: 0.95rem; }
 </style>
 </head>
 <body>
 
 <header>
   <h1>Neura<span>Calc</span></h1>
-  <button>Buy Now</button>
+  <a href="https://discord.gg/S5qMeJ7GUF" target="_blank"><button>Buy Now</button></a>
 </header>
 
 <div class="container hero">
   <div class="hero-text">
-    <span style="background: #818cf8; padding: 0.25rem 0.75rem; border-radius: 9999px; font-size:0.85rem;">Limited Drops</span>
+    <span style="background: #818cf8; padding: 0.35rem 1rem; border-radius: 9999px; font-size:0.9rem;">Limited Drops</span>
     <h2>NeuraCalc</h2>
     <p>A pre-built AI-powered TI-84 with an internal ESP module. We install the hardware, flash the firmware, and ship it ready to go. Connects to the internet through a phone hotspot — interaction happens entirely on the calculator screen.</p>
     <div class="stars">★★★★★  <span style="color:#e0e7ff;">4.9/5 from verified buyers</span></div>
     <div class="hero-buttons">
-      <button class="buy-btn">Buy Now</button>
+      <a href="https://discord.gg/S5qMeJ7GUF" target="_blank"><button class="buy-btn">Buy Now</button></a>
       <button class="learn-btn" onclick="document.getElementById('learn-more').scrollIntoView({behavior:'smooth'})">Learn More</button>
     </div>
-    <p style="margin-top:0.5rem; color:#c7d2fe; font-size:0.875rem;">30-day money-back guarantee • Ships ready to use</p>
+    <p style="margin-top:0.75rem; color:#c7d2fe; font-size:0.9rem;">30-day money-back guarantee • Ships ready to use</p>
   </div>
   <div class="hero-image">
-    <img src="/calculator.png" alt="NeuraCalc AI TI-84 Calculator">
+    <img src="https://cdn.discordapp.com/attachments/1449155052123066498/1449168230210863317/IMG_2257.png?ex=693fe4d6&is=693e9356&hm=3af3e31a7f140918ec76ff2ece75756a97fa6fae9fff8b7b53ca4d063394fb3e&" alt="NeuraCalc AI TI-84 Calculator">
   </div>
 </div>
 
@@ -155,8 +155,8 @@
     <li>Ready out of the box</li>
     <li>30-day guarantee</li>
   </ul>
-  <button>Get Yours</button>
-  <p style="margin-top:0.5rem; color:#c7d2fe; font-size:0.875rem;">Limited units • First come, first served</p>
+  <a href="https://discord.gg/S5qMeJ7GUF" target="_blank"><button>Get Yours</button></a>
+  <p style="margin-top:0.75rem; color:#c7d2fe; font-size:0.9rem;">Limited units • First come, first served</p>
 </section>
 
 <section class="container faq">
@@ -181,7 +181,7 @@
 <div class="container final-cta">
   <h2>Built for Learning. Ready When You Are.</h2>
   <p style="color:#e0e7ff;">Limited builds. No setup. No fluff.</p>
-  <button>Buy Now</button>
+  <a href="https://discord.gg/S5qMeJ7GUF" target="_blank"><button>Buy Now</button></a>
 </div>
 
 <footer>
