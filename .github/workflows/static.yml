@@ -14,13 +14,14 @@
   header h1 { font-weight: 700; font-size: 1.8rem; }
   header h1 span { color: #818cf8; }
 
-  /* Button styled links */
+  /* Buttons as links */
   .btn { display: inline-block; text-decoration: none; text-align: center; font-weight: 600; border-radius: 1.25rem; transition: background 0.3s; cursor: pointer; }
   .btn-buy { background-color: #6366f1; color: #fff; padding: 1rem 2.5rem; font-size: 1.1rem; }
   .btn-buy:hover { background-color: #4f46e5; }
   .btn-learn { border: 2px solid #818cf8; color: #fff; padding: 1rem 2.5rem; font-size: 1.1rem; background: transparent; }
   .btn-learn:hover { background-color: #6366f1; border-color: #a78bfa; }
 
+  /* Hero */
   .hero { display: flex; flex-wrap: wrap; gap: 3rem; align-items: center; margin-top: 6rem; }
   .hero-text { flex: 1 1 500px; padding: 1rem; }
   .hero-text h2 { font-size: 3.5rem; font-weight: 800; background: linear-gradient(90deg, #6366f1, #a78bfa, #6366f1); -webkit-background-clip: text; -webkit-text-fill-color: transparent; margin-bottom: 1.5rem; }
@@ -32,6 +33,7 @@
   .hero-image img { width: 100%; border-radius: 2rem; position: relative; z-index: 10; }
   .hero-image::before { content: ''; position: absolute; inset: -1rem; background: rgba(99, 102, 241, 0.2); filter: blur(80px); border-radius: 50%; z-index: 0; }
 
+  /* Sections */
   section { margin-top: 10rem; padding: 2rem 0; }
 
   .cards { display: flex; flex-wrap: wrap; gap: 3rem; margin-bottom: 6rem; }
@@ -56,6 +58,12 @@
 
   footer { text-align: center; margin-top: 6rem; padding: 3rem 0; color: #c7d2fe; border-top: 1px solid #334155; font-size: 0.95rem; }
 
+  /* Mobile spacing tweaks */
+  @media (max-width: 768px) {
+    .hero { flex-direction: column; }
+    .hero-text, .hero-image { padding: 0; }
+    section { margin-top: 6rem; }
+  }
 </style>
 </head>
 <body>
